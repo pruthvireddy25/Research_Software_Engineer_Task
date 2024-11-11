@@ -9,7 +9,7 @@ The goal of this solution is to:
 
 This approach provides a structured, efficient way to manage and analyze large academic datasets.
 
-### Approach
+## Approach
 **Semantic Filtering Using NLP Techniques:**
 
 **Technique:** Sentence embeddings were created using SentenceTransformers (paraphrase-MiniLM-L6-v2). The embeddings provide a dense, context-aware representation of both the query and paper abstracts, allowing for precise filtering based on semantic content.
@@ -18,3 +18,11 @@ This approach provides a structured, efficient way to manage and analyze large a
 - Unlike traditional keyword-based filtering, semantic filtering detects relevance even when authors use different terminologies, synonyms, or phrasings.
 - This approach minimizes false positives (irrelevant papers containing keywords by coincidence) and false negatives (relevant papers using non-standard terms).
 - By setting an appropriate similarity threshold (0.3-0.5), the system effectively captures nuanced semantic meaning, ensuring a high-quality subset of truly relevant research.
+
+**Classification and Method Extraction:**
+- **Classification:** The classification system analyzes each abstract to determine if the paper focuses on Text Mining, Computer Vision, Both, or Other. This structure supports deeper analysis by organizing research around core technique types.
+- **Method Extraction Using Sentence Similarity:**
+  - Each abstract is semantically compared with method-related keywords (e.g., "convolutional neural network", "GAN"). This step identifies the deep learning methods even if phrased differently.
+  - Sentence similarity here is crucial because it captures the essence of techniques without requiring exact phrase matching, accommodating diverse terminologies and improving extraction precision.
+
+## Resulting Dataset Statistics
