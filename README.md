@@ -45,6 +45,7 @@ This approach provides a structured, efficient way to manage and analyze large a
   - Not specified – 751 papers
 
 ## Instructions to Run:
+- Prior to running, install required dependencies by executing: `pip install sentence-transformers`.
 - Execute task_file.py to process the dataset and output the filtered, classified, and extracted data into filtered_virology_papers.csv.
 - Filtered_virology_papers.csv output file includes columns such as paper ID, title, abstract, is relevant, method type, and method name.
 
