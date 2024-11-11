@@ -26,3 +26,27 @@ This approach provides a structured, efficient way to manage and analyze large a
   - Sentence similarity here is crucial because it captures the essence of techniques without requiring exact phrase matching, accommodating diverse terminologies and improving extraction precision.
 
 ## Resulting Dataset Statistics
+- Initial Dataset: 11,450 records from a keyword-based PubMed search, with metadata and abstracts.
+- After Semantic Filtering: 1382 papers met the relevance threshold of 0.4.
+- Classification Results: For Method type:
+  - text mining – 84 papers
+  - computer vision – 56 papers
+  - both – 83 papers
+  - other – 1159 papers
+
+  For specific Method name extraction:
+  - recurrent neural network – 280 papers
+  - convolutional neural network – 143 papers
+  - RNN – 106 papers
+  - GAN – 38 papers
+  - CNN – 32 papers
+  - LSTM – 19 papers
+  - Autoencoder – 13 papers
+  - Not specified – 751 papers
+
+## Instructions to Run:
+- Execute task_file.py to process the dataset and output the filtered, classified, and extracted data into filtered_virology_papers.csv.
+- Filtered_virology_papers.csv output file includes columns such as paper ID, title, abstract, is relevant, method type, and method name.
+
+## Conclusion
+This solution provides a robust, NLP-driven tool for filtering, classifying, and analyzing deep learning applications in virology and epidemiology research. By using semantic similarity, it surpasses simple keyword-based filters, offering researchers a refined and insightful dataset.
